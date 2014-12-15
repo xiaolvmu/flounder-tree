@@ -40,7 +40,7 @@ TARGET_NO_RADIOIMAGE := true
 
 TARGET_KERNEL_SOURCE := kernel/htc/flounder
 TARGET_KERNEL_CONFIG := flounder_defconfig
-BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive newbootargs
 
 TARGET_BOARD_PLATFORM := tegra132
 TARGET_BOARD_INFO_FILE := device/htc/flounder/board-info.txt
