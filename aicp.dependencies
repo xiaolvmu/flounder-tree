@@ -1,6 +1,6 @@
 [
  {
-   "repository":  "AICP/device_htc_flounde",
+   "repository":  "AICP/device_htc_flounder",
    "target_path": "device/htc/flounder",
    "branch":      "lp5.0"
  },
