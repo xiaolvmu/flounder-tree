@@ -38,10 +38,16 @@ TARGET_NO_BOOTLOADER := true
 
 TARGET_NO_RADIOIMAGE := true
 
-#TARGET_KERNEL_SOURCE := kernel/htc/flounder
-#TARGET_KERNEL_CONFIG := floundertest_defconfig
-#BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-#BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
+ifeq ($(HOST_OS),linux)
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin
+else
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9/bin
+endif
+KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
+TARGET_KERNEL_SOURCE := kernel/htc/flounder
+TARGET_KERNEL_CONFIG := floundertest_defconfig
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 
 TARGET_BOARD_PLATFORM := tegra132
 TARGET_BOARD_INFO_FILE := device/htc/flounder/board-info.txt
