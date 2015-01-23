@@ -35,23 +35,17 @@ TARGET_2ND_CPU_VARIANT := denver
 BUILD_EMULATOR := false
 
 TARGET_NO_BOOTLOADER := true
-
 TARGET_NO_RADIOIMAGE := true
 
-ifeq ($(HOST_OS),linux)
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin
-else
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9/bin
-endif
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9/bin
 KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_SOURCE := kernel/htc/flounder
-TARGET_KERNEL_CONFIG := floundertest_defconfig
+TARGET_KERNEL_CONFIG := flounder_defconfig
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 
 TARGET_BOARD_PLATFORM := tegra132
 TARGET_BOARD_INFO_FILE := device/htc/flounder/board-info.txt
-
 TARGET_BOOTLOADER_BOARD_NAME := flounder
 
 USE_OPENGL_RENDERER := true
@@ -78,6 +72,7 @@ BOARD_OVERRIDE_RS_CPU_VARIANT_64 := cortex-a57
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/flounder/bluetooth
 BOARD_HAVE_BLUETOOTH_BCM := true
 
+# Audio
 BOARD_USES_GENERIC_AUDIO := false
 BOARD_USES_ALSA_AUDIO := true
 
@@ -132,9 +127,9 @@ BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 1
 
 # HACK: Build apps as 64b for volantis_64_only
 ifneq (,$(filter ro.zygote=zygote64, $(PRODUCT_DEFAULT_PROPERTY_OVERRIDES)))
-TARGET_PREFER_32_BIT_APPS :=
-TARGET_SUPPORTS_32_BIT_APPS :=
-TARGET_SUPPORTS_64_BIT_APPS := true
+  TARGET_PREFER_32_BIT_APPS :=
+  TARGET_SUPPORTS_32_BIT_APPS :=
+  TARGET_SUPPORTS_64_BIT_APPS := true
 endif
 
 # Enable dex-preoptimization to speed up first boot sequence
