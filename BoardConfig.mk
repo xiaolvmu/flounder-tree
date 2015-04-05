@@ -40,6 +40,12 @@ TARGET_NO_RADIOIMAGE := true
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin
 KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
 
+ifeq ($(HOST_OS),linux)
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin
+else
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9/bin
+endif
+KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_SOURCE := kernel/htc/flounder
 TARGET_KERNEL_CONFIG := flounder_defconfig
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
@@ -64,10 +70,9 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 BOARD_USES_GENERIC_INVENSENSE := false
 
 # RenderScript
-# OVERRIDE_RS_DRIVER := libnvRSDriver.so
+OVERRIDE_RS_DRIVER := libnvRSDriver.so
 BOARD_OVERRIDE_RS_CPU_VARIANT_32 := cortex-a15
 BOARD_OVERRIDE_RS_CPU_VARIANT_64 := cortex-a57
-# DISABLE_RS_64_BIT_DRIVER := true
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/flounder/bluetooth
