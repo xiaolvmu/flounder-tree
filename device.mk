@@ -244,8 +244,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # overwrite product specific build properties
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=volantis \
-    BUILD_FINGERPRINT="google/volantis/flounder:5.0.1/LRX22C/1602158:user/release-keys" \
-    PRIVATE_BUILD_DESC="volantis-user 5.0.1 LRX22C 1602158 release-keys"
+    BUILD_FINGERPRINT="google/volantis/flounder:5.0.2/LRX22L/1816899:user/release-keys" \
+    PRIVATE_BUILD_DESC="volantis-user 5.0.2 LRX22L 1816899 release-keys"
 
 # Enable USB OTG (CAF commit to Settings)
 ADDITIONAL_BUILD_PROPERTIES += \
