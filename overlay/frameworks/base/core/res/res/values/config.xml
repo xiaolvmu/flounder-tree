@@ -265,9 +265,6 @@
     <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
     <bool name="config_dreamsSupported">true</bool>
     
-    <!-- Doze: force using accelerometer as pick up sensor -->
-    <bool name="config_dozeUseAccelerometer">true</bool>
-    
     <!-- Configure mobile tcp buffer sizes in the form:
          rat-name:rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max
          If no value is found for the rat-name in use, the system default will be applied.
