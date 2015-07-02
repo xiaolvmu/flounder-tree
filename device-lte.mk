@@ -31,8 +31,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 #Add APN's and SPN's for flounder LTE
 PRODUCT_COPY_FILES += \
-    vendor/candy5/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml \
-    vendor/candy5/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml \
-    vendor/candy5/prebuilt/common/etc/spn-conf.xml:system/etc/apns-conf-cdma.xml \
-    vendor/candy5/prebuilt/common/etc/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
+    vendor/cm/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml \
+    vendor/cm/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml \
+    vendor/cm/prebuilt/common/etc/spn-conf.xml:system/etc/apns-conf-cdma.xml \
+    vendor/cm/prebuilt/common/etc/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
 
