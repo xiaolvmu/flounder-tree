@@ -1,1 +1,1 @@
-add_lunch_combo candy5_flounder-userdebug
+add_lunch_combo omni_flounder-userdebug
