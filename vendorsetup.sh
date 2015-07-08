@@ -1,1 +1,2 @@
-add_lunch_combo candy5_flounder-userdebug
+add_lunch_combo eos_flounder-userdebug
+add_lunch_combo aosp_flounder-userdebug
