@@ -1,2 +1,1 @@
-add_lunch_combo eos_flounder-userdebug
-add_lunch_combo aosp_flounder-userdebug
+add_lunch_combo rr_flounder-userdebug
