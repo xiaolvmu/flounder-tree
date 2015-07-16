@@ -15,7 +15,7 @@ $(call inherit-product-if-exists, vendor/htc/flounder/device-vendor.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := flounder
-PRODUCT_NAME := rr_flounder
+PRODUCT_NAME := cm_flounder
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 9
 PRODUCT_MANUFACTURER := htc
